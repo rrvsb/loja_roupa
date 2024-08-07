@@ -1,0 +1,445 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    overflow-x: hidden;
+    background-color: rgb(230, 230, 230);
+}
+
+/* header */
+
+.apli_info {
+    background-color: rgb(0, 0, 0);
+    width: 12rem;
+    height: 54rem;
+    display: none;
+    overflow-x: hidden;
+    animation: transiçao 0.5s ease-in;
+    position: absolute;
+}
+
+.burger {
+    position: absolute;
+    display: inline-block;
+    cursor: pointer;
+    z-index: 1000;
+    left: 5vh;
+    top: 2vh;
+}
+
+.burger span {
+
+    display: block;
+    width: 70px;
+    height: 6px;
+    background: #333;
+    margin: 6px 0;
+    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55),
+        opacity 0.3s ease;
+
+}
+
+#burger-checkbox {
+    display: none;
+}
+
+#burger-checkbox:checked+.burger span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+#burger-checkbox:checked+.burger span:nth-child(2) {
+    opacity: 0;
+    transform: translateX(-20px);
+}
+
+#burger-checkbox:checked+.burger span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+#nav_opi {
+    position: relative;
+    top: 10rem;
+    padding: 0vh;
+    gap: 5vh;
+    display: grid;
+    color: white;
+    background-color: #454747	;
+
+}
+
+a {
+    color: white;
+    text-decoration: none;
+    margin: 2vh;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a:hover {
+    transition: 1.2s;
+    border-radius: 10px;
+}
+
+.menu__link {
+    color: #fff;
+    line-height: 2;
+    position: relative;
+}
+
+.menu__link::before {
+    content: '';
+    width: 0;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #fff;
+    position: absolute;
+    bottom: -.25rem;
+    right: 0;
+    transition: right .4s, width .4s, left .4s;
+}
+
+.menu__link:hover::before {
+    width: 100%;
+    left: 0;
+}
+
+.fundo_top {
+    background-color: rgb(16, 13, 14);
+    width: 120rem;
+    height: 10rem;
+    position: absolute;
+}
+
+.button_other {
+    display: flex;
+    position: relative;
+    left: 40rem;
+    top: 10.6vh;
+}
+.wrapper {
+    display: inline-flex;
+    list-style: none;
+    height: 120px;
+    width: 100%;
+    padding-top: 40px;
+    font-family: "Poppins", sans-serif;
+    justify-content: center;
+  }
+  
+  .wrapper .icon {
+    position: relative;
+    bottom: 5vh;
+    background: #fff;
+    border-radius: 50%;
+    left: 15vh;
+    margin: 10px;
+    width: 50px;
+    height: 50px;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .tooltip {
+    position: absolute;
+    top: 0;
+    font-size: 14px;
+    background: #fff;
+    color: #fff;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .tooltip::before {
+    position: absolute;
+    content: "";
+    height: 8px;
+    width: 8px;
+    background: #fff;
+    bottom: -3px;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+    transition: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  
+  .wrapper .icon:hover .tooltip {
+    top: -45px;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+  }
+  
+  .wrapper .icon:hover span,
+  .wrapper .icon:hover .tooltip {
+    text-shadow: 0px -1px 0px rgba(0, 0, 0, 0.1);
+  }
+  
+  .wrapper .facebook:hover,
+  .wrapper .facebook:hover .tooltip,
+  .wrapper .facebook:hover .tooltip::before {
+    background: #1877f2;
+    color: #fff;
+  }
+  
+  .wrapper .twitter:hover,
+  .wrapper .twitter:hover .tooltip,
+  .wrapper .twitter:hover .tooltip::before {
+    background: #1da1f2;
+    color: #fff;
+  }
+  
+  .wrapper .instagram:hover,
+  .wrapper .instagram:hover .tooltip,
+  .wrapper .instagram:hover .tooltip::before {
+    background: #e4405f;
+    color: #fff;
+  }
+  
+
+
+
+
+button {
+    padding: 3vh;
+    width: 10%;
+    border: solid 0px;
+    outline: solid 0px;
+    font-family: 'Franklin Gothic Medium',
+        'Arial Narrow',
+        Arial,
+        sans-serif;
+    background-color: rgba(27, 27, 27, 0);
+    color: white;
+    cursor: pointer;
+    backdrop-filter: brightness(50px);
+    ;
+
+}
+
+button:hover {
+    transition: 1s;
+    transform: scale(1.4);
+    color: rgb(255, 247, 3);
+}
+
+@keyframes transiçao {
+    0% {
+        transition: 1.2s;
+        translate: -30vh;
+    }
+}
+
+
+
+/* main colors */
+.produto_see {
+    position: absolute;
+    display: grid;
+    background-color: #13033f		;
+    width: 1600px;
+    height: 1600px;
+    left: 13rem;
+    top: 12rem;
+    grid-template-columns: repeat(3, 1fr);
+    border-radius: 10px;
+}
+.personalozaçao_graund{
+
+position: absolute;
+top: -13vh;
+left: 34%;
+width: 10%;
+height: 190vh;
+background-color: #e2c000	;
+transform: rotate(145deg);
+border-radius: 20px;
+
+
+
+
+}
+
+.roupa_sporte {
+    width: 20rem;
+    margin-top: 15vh;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    translate: 30%;
+    cursor: pointer;
+}
+
+.roupa_sporte:hover {
+    transition: 1.1s;
+    transform: scale(1.1);
+}
+
+.next_page {
+    position: absolute;
+    left: 92rem;
+    width: 10%;
+    top: 14%;
+    cursor: pointer;
+}
+
+.next_page:hover {
+    transition: 1.1s;
+    transform: scale(1.1);
+}
+
+.grid1-produto {
+    display: grid;
+    grid-template-columns: repeat(4, 7fr);
+    gap: 12rem;
+    animation: grade2br 0.5s ease-in;
+}
+
+.grid2-produto {
+    display: grid;
+    grid-template-columns: repeat(4, 7fr);
+    gap: 12rem;
+    display: none;
+    animation: grade2br 0.5s ease-in;
+    translate: 10vh;
+}
+
+.next_page2 {
+    position: absolute;
+    right: 92rem;
+    width: 10%;
+    top: 14%;
+    cursor: pointer;
+    transform: rotate(180deg);
+
+}
+
+/* gride3 */
+
+.grid3-produto {
+    display: grid;
+    grid-template-columns: repeat(3, 7fr);
+    gap: 15rem;
+    position: absolute;
+    top: 50rem;
+    left: 10vh;
+}
+
+.estampas {
+    width: 20rem;
+    background-color: white;
+    border-radius: 10px;
+}
+
+/* tamanhos de camisa */
+
+.tamanhos__camisa {
+    display: grid;
+    padding: 1rem;
+    width: 15%;
+    position: absolute;
+    right: 80vh;
+    grid-template-columns: repeat(3, 7fr);
+    color: rgb(255, 255, 255);
+    background-color: rgb(31, 31, 32);
+    top: 37.6vh;
+    right: 129vh;
+    border-radius: 5px;
+}
+
+
+.tamanhos__camisa2 {
+    display: grid;
+    padding: 1rem;
+    width: 15%;
+    position: absolute;
+    right: 80vh;
+    grid-template-columns: repeat(3, 7fr);
+    color: rgb(255, 255, 255);
+    background-color: rgb(31, 31, 32);
+    top: 37.8vh;
+    right: 64vh;
+    border-radius: 5px;
+}
+
+.tamanhos__camisa3 {
+    display: grid;
+    padding: 1rem;
+    width: 15%;
+    position: absolute;
+    right: 80vh;
+    grid-template-columns: repeat(3, 7fr);
+    color: rgb(255, 255, 255);
+    background-color: rgb(31, 31, 32);
+    top: 37.8vh;
+    right: 0vh;
+    border-radius: 5px;
+}
+
+.tamanhos__camisa4 {
+    display: none;
+
+    padding: 1rem;
+    width: 15%;
+    position: absolute;
+    right: 80vh;
+    grid-template-columns: repeat(3, 7fr);
+    color: rgb(255, 255, 255);
+    background-color: rgb(31, 31, 32);
+    top: 37.6vh;
+    right: 129vh;
+    border-radius: 5px;
+}
+
+.tamanhos__camisa5 {
+    display: none;
+
+    padding: 1rem;
+    width: 15%;
+    position: absolute;
+    right: 80vh;
+    grid-template-columns: repeat(3, 7fr);
+    color: rgb(255, 255, 255);
+    background-color: rgb(31, 31, 32);
+    top: 3.6vh;
+    right: 129vh;
+    border-radius: 5px;
+}
+
+.tamanhos__camisa6 {
+    display: none;
+
+    padding: 1rem;
+    width: 15%;
+    position: absolute;
+    right: 80vh;
+    grid-template-columns: repeat(3, 7fr);
+    color: rgb(255, 255, 255);
+    background-color: rgb(31, 31, 32);
+    top: 37.6vh;
+    right: 129vh;
+    border-radius: 5px;
+}
+
+
+
+/* trasiçao frames. */
+@keyframes grade2br {
+
+
+    0% {
+        transform: translateX(100px);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
